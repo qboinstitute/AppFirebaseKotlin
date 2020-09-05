@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "166003609979",
+    "firebase_url": "https://appfullcodeqbo.firebaseio.com",
+    "project_id": "appfullcodeqbo",
+    "storage_bucket": "appfullcodeqbo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166003609979:android:a68524c6c4ce9728926dde",
+        "android_client_info": {
+          "package_name": "qboinstitute.com.appfirebasekotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166003609979-n171gdodjbn8mr45mtneg6ogq2gsrru4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "qboinstitute.com.appfirebasekotlin",
+            "certificate_hash": "05d59dce9b5e0da5a1b636398caec6e7e607019f"
+          }
+        },
+        {
+          "client_id": "166003609979-rcdmpd4uqipbhh888rv7c2h6gner51ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsTlyg8dD1VUquJqiF-rPdTwBjSvvwmxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166003609979-rcdmpd4uqipbhh888rv7c2h6gner51ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
