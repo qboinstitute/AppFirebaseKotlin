@@ -1,7 +1,12 @@
 package qboinstitute.com.appfirebasekotlin
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
+import android.view.TextureView
+import android.widget.ImageView
+import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -13,10 +18,13 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navView: NavigationView
+    var tipo : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
+        navView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -38,6 +46,33 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        mostrarInfoAutenticacion()
+    }
+
+    fun mostrarInfoAutenticacion(){
+        val bundle: Bundle? = intent.extras
+        val email : String? = bundle?.getString("email")
+        tipo = bundle?.getString("tipo").toString()
+        val urlimagen : String? = bundle?.getString("urlimg")
+        val nombre : String? = bundle?.getString("nombre")
+        val preferencia : SharedPreferences.Editor =
+            getSharedPreferences("appQBO", Context.MODE_PRIVATE).edit()
+        preferencia.putString("email", email)
+        preferencia.putString("nombre", nombre)
+        preferencia.putString("urlimg", urlimagen)
+        preferencia.putString("tipo", tipo)
+        preferencia.apply()
+        val tvnomusuario :TextView = navView.getHeaderView(0)
+            .findViewById(R.id.tvnomusuario)
+        val tvemailusuario :TextView = navView.getHeaderView(0)
+            .findViewById(R.id.tvemailusuario)
+        val ivusuario :ImageView = navView.getHeaderView(0)
+            .findViewById(R.id.ivusuario)
+        tvnomusuario.text = nombre
+        tvemailusuario.text = email
+        if(tipo != TipoAutenticacion.FIREBASE.name){
+            Picasso.get().load(urlimagen).into(ivusuario)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
