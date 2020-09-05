@@ -55,6 +55,8 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     //Corregir el error de cantidad clases.
     implementation 'androidx.multidex:multidex:2.0.1'
+    //Autenticación con Google
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
