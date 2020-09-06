@@ -21,4 +21,8 @@
     <string name="valfraggaleria">Galeria Storage</string>
     <string name="valfragregistro">Registro Firestore</string>
     <string name="valfraglistar">Lista Firestore</string>
+    <string name="valetnompersona">Ingrese nombre</string>
+    <string name="valetappersona">Ingrese apellido</string>
+    <string name="valetedadpersona">Ingrese edad</string>
+    <string name="valbtnregistrar">Registrar Firestore</string>
 </resources>
