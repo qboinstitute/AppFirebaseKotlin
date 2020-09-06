@@ -57,6 +57,10 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     //Autenticación con Google
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    //Autenticación con Facebook
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    //Firebase Storage
+    implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'

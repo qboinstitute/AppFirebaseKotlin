@@ -14,4 +14,11 @@
     <string name="valetusuario">Ingrese su usuario</string>
     <string name="valetpassword">Ingrese su password</string>
     <string name="valbtnloginfirebase">AUTENTICACIÓN FIREBASE</string>
+    <string name="facebook_app_id">735361570650864</string>
+    <string name="fb_login_protocol_scheme">fb735361570650864</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="valfraggaleria">Galeria Storage</string>
+    <string name="valfragregistro">Registro Firestore</string>
+    <string name="valfraglistar">Lista Firestore</string>
 </resources>
